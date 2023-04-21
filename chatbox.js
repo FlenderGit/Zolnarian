@@ -149,7 +149,7 @@ class Chatbox extends HTMLElement {
 
 
 
-let style = "zol-chatbox{display:flex;flex:1;flex-direction:column;padding:1rem}zol-chatbox > #zol-chatbox-container{flex:1;display:flex;flex-direction:column;overflow-y:scroll}zol-chatbox > #zol-chatbox-container::before{position:relative;content:'';flex:1 1 auto}#zol-chatbox-container > *{margin:.2rem 0}zol-chatbox > #zol-chatbox-container *{color:#f5f5f5;font-size:large}zol-chatbox form{display:flex}zol-chatbox input{flex:1}"
+let style = "zol-chatbox{display:flex;flex:1;flex-direction:column;padding:1rem}zol-chatbox > #zol-chatbox-container{flex:1;display:flex;flex-direction:column;overflow-y:auto}zol-chatbox > #zol-chatbox-container::before{position:relative;content:'';flex:1 1 auto;}#zol-chatbox-container > *{margin:.2rem 0}zol-chatbox > #zol-chatbox-container *{color:#f5f5f5;font-size:large}zol-chatbox form{display:flex}zol-chatbox input{flex:1}"
 createCSSFile(style)
 
 customElements.define('zol-chatbox', Chatbox);
