@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.7.2.2.js"></script>
+    <script src="./zolnarian.js"></script>
+
+    <script defer src="./chatbox.js"></script>
+    <script defer src="./datenow.js"></script>
+    <script defer src="./typewritter.js"></script>
+
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbox {
+            height: 50%;
+            width: 50%;
+            background-color: rebeccapurple;
+
+            display: flex;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+
+    <p>Heure en direct : <zol-datenow></zol-datenow></p>
+
+    <zol-typewritter text="Je suis un exemple de texte !"></zol-typewritter>
+
+    <div class="chatbox">
+        <zol-chatbox>        
+            <template>
+                <p><strong>{{login}}</strong> : {{ message }}</p>
+            </template>
+        </zol-chatbox>
+    </div>
+    
+
+</body>
+</html>
