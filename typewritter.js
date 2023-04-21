@@ -49,19 +49,4 @@ var style_typewriter = 'zol-typewritter { border-right: black solid .1rem; } zol
 
 createCSSFile(style_typewriter)
 
-var styleElement = document.createElement('style')
-styleElement.type = 'text/css'
-styleElement.appendChild(document.createTextNode(style))
-
-var linkElement = document.createElement('link')
-linkElement.rel = 'stylesheet'
-linkElement.href = 'style.css'
-
-var cssBlob = new Blob([style], {type: 'text/css'})
-var cssUrl = URL.createObjectURL(cssBlob)
-
-linkElement.href = cssUrl
-
-document.head.appendChild(linkElement)
-
 customElements.define('zol-typewritter', TypeWritter);
